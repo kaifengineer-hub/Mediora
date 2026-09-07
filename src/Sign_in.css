@@ -1,0 +1,145 @@
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family:'Poppins',sans-serif;
+}
+
+body{
+    background:#f4f9fc;
+}
+
+/* ---------- Container ---------- */
+
+.form-container{
+    width:100%;
+    min-height:100vh;
+    display:flex;
+    flex-direction:column;
+    justify-content:center;
+    align-items:center;
+    background:linear-gradient(135deg,#eef8ff,#d9f1ff);
+    padding:20px;
+}
+
+
+
+#mediora{
+    font-size:42px;
+    color:#0096c7;
+    letter-spacing:4px;
+    font-weight:700;
+    margin-bottom:25px;
+    text-shadow:2px 2px 8px rgba(0,150,199,.25);
+}
+
+
+
+.form{
+    width:100%;
+    max-width:420px;
+    background:#fff;
+    padding:35px;
+    border-radius:18px;
+    box-shadow:0 12px 35px rgba(0,0,0,.12);
+}
+
+
+
+#login{
+    text-align:center;
+    font-size:30px;
+    color:#333;
+    margin-bottom:25px;
+}
+
+
+.form form{
+    display:flex;
+    flex-direction:column;
+}
+
+.form label{
+    margin:10px 0 6px;
+    font-size:15px;
+    font-weight:600;
+    color:#444;
+}
+
+.form input{
+    width:100%;
+    padding:13px 15px;
+    border:1px solid #cfd8dc;
+    border-radius:10px;
+    font-size:15px;
+    outline:none;
+    transition:.3s;
+}
+
+.form input:focus{
+    border-color:#0096c7;
+    box-shadow:0 0 8px rgba(0,150,199,.25);
+}
+
+
+
+.form button{
+    width:100%;
+    padding:14px;
+    border:none;
+    border-radius:10px;
+    font-size:16px;
+    font-weight:600;
+    cursor:pointer;
+    transition:.3s;
+}
+
+.form button[type="submit"]{
+    margin-top:22px;
+    background:#0096c7;
+    color:#fff;
+}
+
+.form button[type="submit"]:hover{
+    background:#0077b6;
+    transform:translateY(-2px);
+}
+
+.form button[type="button"]{
+    margin-top:12px;
+    background:#fff;
+    border:2px solid #0096c7;
+    color:#0096c7;
+}
+
+.form button[type="button"]:hover{
+    background:#0096c7;
+    color:#fff;
+}
+
+
+
+@media (max-width:480px){
+
+    #mediora{
+        font-size:34px;
+        letter-spacing:2px;
+    }
+
+    .form{
+        padding:28px 22px;
+    }
+
+    #login{
+        font-size:26px;
+    }
+
+    .form input{
+        padding:12px;
+    }
+
+    .form button{
+        padding:12px;
+    }
+
+}

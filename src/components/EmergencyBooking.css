@@ -1,0 +1,186 @@
+:root {
+  --bg-main: #f0f4f4;
+  --surface: #ffffff;
+  --surface-alt: #f7faf9;
+  --text-primary: #1e293b;
+  --text-secondary: #475569;
+  --text-muted: #64748b;
+  --border: #e2e8f0;
+  --border-soft: #d1fae5;
+  --brand-primary: #0f766e;        /* Hopeful, grounded deep teal */
+  --brand-primary-hover: #115e59;
+  --accent-soft: #ecfdf5;          /* Calming mint/sage tint */
+  --accent-text: #065f46;
+  --shadow-sm: 0 2px 6px rgba(15, 118, 110, 0.05);
+  --shadow-md: 0 8px 20px -4px rgba(15, 23, 42, 0.08);
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Poppins', system-ui, -apple-system, sans-serif;
+}
+
+body {
+  background: var(--bg-main);
+  color: var(--text-primary);
+  min-height: 100vh;
+}
+
+.Header-container {
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+  background: var(--surface);
+  border-bottom: 1px solid var(--border);
+  box-shadow: var(--shadow-sm);
+}
+
+/* Grid layout with containment guarantees */
+.EmergencyBookingcontainer {
+  max-width: 1320px;
+  margin: 24px auto;
+  padding: 0 16px;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(min(100%, 340px), 1fr));
+  gap: 24px;
+  width: 100%;
+}
+
+/* Card strictly constrained within its grid cell */
+.emergencyCard {
+  background: var(--surface);
+  border-radius: 16px;
+  overflow: hidden;
+  border: 1px solid var(--border);
+  box-shadow: var(--shadow-sm);
+  display: flex;
+  flex-direction: column;
+  min-width: 0;               /* Prevents flex items from exceeding parent width */
+  min-height: 100%;           /* Equal-height rows without rigid pixel overflow */
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.emergencyCard:hover {
+  transform: translateY(-3px);
+  box-shadow: var(--shadow-md);
+}
+
+.emergencyCard img {
+  width: 100%;
+  height: 190px;
+  object-fit: cover;
+  display: block;
+}
+
+/* Internal layout handling scroll-free stretching */
+.card-body {
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+  flex: 1;
+}
+
+.card-body h2 {
+  color: var(--brand-primary);
+  font-size: 1.25rem;
+  font-weight: 600;
+  letter-spacing: -0.01em;
+  text-align: center;
+}
+
+.info-row {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 12px;
+  padding: 10px 14px;
+  border-radius: 10px;
+  background: var(--surface-alt);
+  border: 1px solid var(--border);
+  min-width: 0;
+}
+
+.info-row span:first-child {
+  font-size: 0.875rem;
+  font-weight: 500;
+  color: var(--text-secondary);
+  flex-shrink: 0;
+}
+
+.info-row span:last-child {
+  font-size: 0.875rem;
+  font-weight: 600;
+  color: var(--text-primary);
+  text-align: right;
+  overflow-wrap: anywhere;    /* Prevents unbroken text/links from escaping */
+}
+
+.location-box,
+.note-box {
+  background: var(--accent-soft);
+  border: 1px solid var(--border-soft);
+  border-radius: 10px;
+  padding: 12px 14px;
+  min-width: 0;
+}
+
+.location-box h4,
+.note-box h4 {
+  font-size: 0.875rem;
+  font-weight: 600;
+  color: var(--accent-text);
+  margin-bottom: 4px;
+}
+
+.location-box p,
+.note-box p {
+  font-size: 0.85rem;
+  line-height: 1.45;
+  color: var(--text-secondary);
+  overflow-wrap: anywhere;
+  margin: 0;
+}
+
+/* High-contrast, reassuring action trigger */
+.track-btn {
+  margin-top: auto;
+  width: 100%;
+  padding: 13px 18px;
+  border: none;
+  border-radius: 10px;
+  background: var(--brand-primary);
+  color: #ffffff;
+  font-size: 0.95rem;
+  font-weight: 600;
+  letter-spacing: 0.01em;
+  cursor: pointer;
+  transition: background-color 0.2s ease, transform 0.1s ease;
+}
+
+.track-btn:hover {
+  background: var(--brand-primary-hover);
+}
+
+.track-btn:active {
+  transform: scale(0.99);
+}
+
+@media (max-width: 640px) {
+  .EmergencyBookingcontainer {
+    padding: 0 12px;
+    gap: 16px;
+    margin: 16px auto;
+  }
+
+  .card-body {
+    padding: 16px;
+    gap: 10px;
+  }
+  
+  .emergencyCard img {
+    height: 160px;
+  }
+}

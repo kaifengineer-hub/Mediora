@@ -1,0 +1,176 @@
+/* ---------- HEADER ---------- */
+
+.HEADER {
+    width: 100%;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+    background: #ffffff;
+    box-shadow: 0 2px 10px rgba(0,0,0,0.08);
+}
+
+/* ---------- PAGE ---------- */
+
+.Emergency-container {
+    max-width: 1100px;
+    margin: 40px auto;
+    padding: 30px;
+    display: flex;
+    gap: 40px;
+    align-items: flex-start;
+    background: #ffffff;
+    border-radius: 18px;
+    box-shadow: 0 10px 30px rgba(0,0,0,.08);
+}
+
+/* ---------- LEFT SIDE ---------- */
+
+.hospital-details {
+    flex: 1;
+    text-align: center;
+}
+
+.hospital-details img {
+    width: 100%;
+    height: 320px;
+    object-fit: cover;
+    border-radius: 15px;
+    box-shadow: 0 5px 15px rgba(0,0,0,.15);
+}
+
+.hospital-details h1 {
+    margin-top: 20px;
+    color: #d32f2f;
+    font-size: 2rem;
+}
+
+/* ---------- RIGHT SIDE ---------- */
+
+.emergency-form {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.emergency-form h2 {
+    text-align: center;
+    color: #d32f2f;
+    font-size: 1.8rem;
+    margin-bottom: 10px;
+}
+
+/* ---------- INPUTS ---------- */
+
+.input-group {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+}
+
+.input-group label {
+    font-size: 15px;
+    font-weight: 600;
+    color: #333;
+}
+
+.input-group input,
+.input-group textarea,
+.input-group select {
+    width: 100%;
+    padding: 14px;
+    border: 1px solid #d9d9d9;
+    border-radius: 10px;
+    font-size: 15px;
+    outline: none;
+    transition: .3s;
+    box-sizing: border-box;
+}
+
+.input-group input:focus,
+.input-group textarea:focus,
+.input-group select:focus {
+    border-color: #d32f2f;
+    box-shadow: 0 0 8px rgba(211,47,47,.2);
+}
+
+.input-group textarea {
+    resize: vertical;
+    min-height: 100px;
+}
+
+/* ---------- LOCATION BUTTON ---------- */
+
+.input-group button {
+    padding: 14px;
+    background: #1976d2;
+    color: white;
+    border: none;
+    border-radius: 10px;
+    cursor: pointer;
+    font-size: 15px;
+    font-weight: 600;
+    transition: .3s;
+}
+
+.input-group button:hover {
+    background: #125ca5;
+}
+
+.input-group p {
+    margin: 0;
+    text-align: center;
+    color: #2e7d32;
+    font-weight: 600;
+}
+
+/* ---------- SUBMIT ---------- */
+
+.request-btn {
+    margin-top: 10px;
+    padding: 16px;
+    background: #d32f2f;
+    color: white;
+    border: none;
+    border-radius: 10px;
+    font-size: 18px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: .3s;
+}
+
+.request-btn:hover {
+    background: #b71c1c;
+    transform: translateY(-2px);
+}
+
+.request-btn:active {
+    transform: scale(.98);
+}
+
+/* ---------- RESPONSIVE ---------- */
+
+@media (max-width: 900px) {
+
+    .Emergency-container {
+        flex-direction: column;
+        margin: 20px;
+        padding: 20px;
+    }
+
+    .hospital-details img {
+        height: 250px;
+    }
+
+    .hospital-details h1 {
+        font-size: 1.6rem;
+    }
+
+    .emergency-form h2 {
+        font-size: 1.5rem;
+    }
+
+    .request-btn {
+        font-size: 16px;
+    }
+}

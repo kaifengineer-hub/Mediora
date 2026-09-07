@@ -1,0 +1,125 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background: #f4f7fb;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+.hospital-container {
+  width: 90%;
+  margin: 30px auto;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+  gap: 25px;
+}
+
+.hospital {
+  background: #fff;
+  border-radius: 15px;
+  overflow: hidden;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.15);
+  padding-bottom: 20px;
+}
+
+.hospital > img {
+  width: 100%;
+  height: 220px;
+  object-fit: cover;
+}
+
+.hospital span {
+  display: inline-block;
+  margin: 12px 10px;
+  padding: 5px 12px;
+  background: #0d6efd;
+  color: white;
+  border-radius: 20px;
+  font-size: 14px;
+}
+
+.hospital h2 {
+  margin: 10px;
+  color: #222;
+}
+
+
+
+.Doctor-Slider {
+  display: flex;
+  overflow-x: auto;
+  gap: 15px;
+  padding: 15px 10px;
+  scroll-behavior: smooth;
+}
+
+.Doctor-Slider::-webkit-scrollbar {
+  height: 8px;
+}
+
+.Doctor-Slider::-webkit-scrollbar-thumb {
+  background: #bbb;
+  border-radius: 10px;
+}
+
+.Doctor-Slider > div {
+  min-width: 170px;
+  background: #f8f9fa;
+  border-radius: 12px;
+  padding: 10px;
+  text-align: center;
+  flex-shrink: 0;
+  transition: 0.3s;
+}
+
+.Doctor-Slider > div:hover {
+  transform: translateY(-5px);
+}
+
+.Doctor-Slider img {
+  width: 90px;
+  height: 90px;
+  border-radius: 50%;
+  object-fit: cover;
+  margin-bottom: 10px;
+}
+
+.Doctor-Slider h3 {
+  font-size: 18px;
+  color: #222;
+}
+
+.Doctor-Slider p {
+  color: #666;
+  font-size: 14px;
+  margin-top: 5px;
+}
+
+
+
+button {
+  margin: 15px 10px 0;
+  padding: 10px 18px;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  font-size: 15px;
+  transition: 0.3s;
+}
+
+button:first-of-type {
+  background: #198754;
+  color: white;
+}
+
+button:last-of-type {
+  background: #dc3545;
+  color: white;
+}
+
+button:hover {
+  opacity: 0.9;
+} 
